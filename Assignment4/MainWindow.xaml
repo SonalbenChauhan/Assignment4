@@ -1,0 +1,58 @@
+﻿<Window x:Class="Assignment4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="FontFamily" Value="Arial"/>
+                        <Setter Property="FontSize" Value="16"/>
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Margin" Value="0,5,0,5"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="Age" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <TextBox  x:Name="txtAge" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Heights" HorizontalAlignment="Left"  VerticalAlignment="Top" />
+                <TextBox  x:Name="txtHeight" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="CreditCard" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <TextBox  x:Name="txtCreditCard" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="Customer Type" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <ComboBox x:Name="cmbCustomerType" HorizontalAlignment="Left" Margin="154,32.6,0,6" Grid.Row="3" Width="120" Grid.ColumnSpan="2" Grid.RowSpan="2" SelectionChanged="CmbCustomerType_SelectionChanged"/>
+                <Label Grid.Row="5" Grid.Column="0" Content="Select Avilable Slots" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <ComboBox x:Name="cmbSlot" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Top" Width="120"/>
+                <Label x:Name="lblAdditional"  Grid.Row="6" Grid.Column="0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden" />
+                <ComboBox x:Name="cmbAdditional" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="6" Visibility="Hidden" VerticalAlignment="Top" Width="120"/>
+                <Label x:Name="lblAdditional1"  Grid.Row="7" Grid.Column="0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden"/>
+                <ComboBox x:Name="cmbAdditional1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="7" Visibility="Hidden" VerticalAlignment="Top" Width="120"/>
+
+                <Button Grid.Row="7" Width="100" Content="Add Client" Margin="18,38.4,38,-37.6" Click="Button_Click"/>
+                <Button x:Name="btnShow" Grid.Row="7" Width="100" Content="Show" Margin="154,38.4,77.2,-37.6" Click="BtnShow_Click" Grid.ColumnSpan="2" />
+                <TextBlock x:Name="txtDisplay" Grid.Column="1" HorizontalAlignment="Left" Margin="264.6,10,-456,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="146" Grid.RowSpan="5" Width="365"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
